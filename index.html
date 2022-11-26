@@ -6,24 +6,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Todo-in-JS</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://kit.fontawesome.com/b7364fa510.js" crossorigin="anonymous"></script>
 
-        <style>
-            body {
-                text-align: center;
-                padding: 50px;
-            }
-        </style>
     </head>
 
     <body>
-        <h1>Todo App</h1>
-        <form action="">
-            <input class="input" type="text" placeholder="What's your plan...">
-            <button class="submit">Add Todo...</button>
-        </form>
-        <h2>Todo List</h2>
+        <div class="container">
+            <h1>Todo App</h1>
+            <form action="">
+                <div>
+                    <input class="input" type="text" placeholder="What's your plan...">
+                    <button class="submit">Add Todo...</button>
+            </form>
+        </div>
+        <hr>
+        <hr>
+        <h2 class="todo-list">Todo List</h2>
         <div class="todoList"></div>
-        <script src="./script.js"></script>
+        </div>
     </body>
+    <script src="./script.js"></script>
 
 </html>

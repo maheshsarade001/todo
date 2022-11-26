@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px 0;
+    background-color: rgb(139, 100, 100)
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    /* background-color: #FFFFFF ; */
+    width: 75%;
+    margin: auto;
+    /* padding: 10px ; */
+}
+
+.input {
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    padding: 10px;
+
+}
+
+.submit {
+    border: none;
+    font-size: 22px;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.todo-list {
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+}
+
+h3 {
+    color: rgb(21, 192, 204);
+    font-size: 30px;
+}
+
+.todos {
+    margin: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 196);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.btn-grp :nth-child(1){
+    color: rgb(0, 156, 44);
+    font-size: 28px;
+    margin: 0 20px;
+}
+
+.btn-grp :nth-child(1):hover{
+    transform: scale(1.2);
+
+}
+
+.btn-grp :nth-child(2){
+    color: rgb(188, 122, 0);
+    font-size: 28px;
+}
+
+.btn-grp :nth-child(2):hover{
+    transform: scale(1.2);
+
+}
