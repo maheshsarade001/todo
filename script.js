@@ -31,7 +31,7 @@ function addTodo() {
 function showTodos() {
     let todoArray = JSON.parse(localStorage.getItem("todoArray"))
     let abc = todoArray.map((todo) => {
-        return `<div class="todos" key="todo_${todo.id}">
+        return `<div id="main_${todo.id}" class="todo" key="todo_${todo.id}">
             <h3>${todo.value}</h3>
             <div class="btn-grp">
                 <i class="editTodo fa-solid fa-pen-to-square"  id="${todo.id}"></i>
@@ -44,6 +44,22 @@ function showTodos() {
 
     const editTodo = document.querySelectorAll(".editTodo")
     const deleteTodo = document.querySelectorAll(".deleteTodo")
+    const todo = document.querySelectorAll(".todo")
+    const h3 = document.querySelectorAll("h3")
+
+
+    // Completed Mark
+    h3.forEach((hThree)=>{
+        hThree.addEventListener("click", function completed(){
+            todo.forEach((todoOne)=>{
+                if(hThree.parentElement.id === todoOne.id){
+                        todoOne.classList.toggle("completed")
+                    }
+            })
+        })
+    })
+
+
 
     // Delete functionality 
     deleteTodo.forEach((todoDiv) => {
@@ -58,14 +74,12 @@ function showTodos() {
     // Edit functionality
     editTodo.forEach((todoDiv) => {
         todoDiv.addEventListener("click", (e) => {
-            console.log(todoArray);
             let edited = prompt()
             if (edited) {
 
                 todoArray.map((todo) => {
                     if (parseInt(todo.id) == parseInt(e.target.id)) {
                         todo.value = edited
-                        console.log(todo.value);
                     }
                 })
             } else {
